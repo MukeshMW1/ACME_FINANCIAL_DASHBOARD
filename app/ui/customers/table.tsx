@@ -1,5 +1,4 @@
 import Image from 'next/image';
-i
 import Search from '@/app/ui/search';
 import {
   CustomersTableType,
