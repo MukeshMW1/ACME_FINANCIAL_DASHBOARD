@@ -2,26 +2,29 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import styles from './ui/home.module.css';
 import clsx from 'clsx';
+import AcmeLogo from './ui/acme-logo';
 import { stat } from 'fs';
-
+import { lusitana } from './ui/fonts';
 export default function Page() {
-  let status:boolean = false;
-  return (
+  let statu:any = false; 
+   return (
     <main className="flex min-h-screen flex-col p-6">
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
-        {/* <AcmeLogo /> */}
+        <AcmeLogo />
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-        <div
+        {/* <div
   className={styles.shape}
-/>
+/> */}
           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
-            </a>
+            </a><span className={`${lusitana.className} antialiased`}>
+
             , brought to you by Vercel.
+            </span>
           </p>
           <Link
             href="/login"
@@ -33,8 +36,8 @@ export default function Page() {
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
           <span className={clsx('inline-flex items-center rounded-full px-2 py-1 text-sm',{
-            'bg-gray-100 text-gray-800': status == true,
-            'bg-gray-800 text-blue-400': status == false,
+            'bg-gray-100 text-gray-800': statu == true,
+            'bg-gray-800 text-blue-400': statu == false,
           })}>Hello ! This is the span element.</span>
         </div>
       </div>
